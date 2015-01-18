@@ -22,12 +22,6 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-
-        Button btn = (Button) findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-
                     Map contactMap = new HashMap();
 
                     Uri queryUri = ContactsContract.Contacts.CONTENT_URI;
@@ -59,17 +53,12 @@ public class MyActivity extends Activity {
                     }
 
                     cursor.close();
-                    startActivity(new Intent(MyActivity.this, MainActivity2.class));
-                }
-
-        });
+                };
 
 
 
 
 
-
-    }
 
 
 }
